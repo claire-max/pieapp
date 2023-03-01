@@ -1,8 +1,13 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
+import Services from "../components/Services";
+import { client } from "../lib/client";
+import Menu from "../components/Menu";
 
-export default function Home() {
+export default function Home({pizzas}) {
+
+
   return (
     <Layout>
       <div>
@@ -13,10 +18,26 @@ export default function Home() {
         </Head>
         {/* body */}
         <main>
-        <Hero/>        
+        <Hero/> 
+        <br/>
+        <Services/> 
+        <Menu pizzas={pizzas}/>      
         </main>
       </div>
       </Layout>
   );
 }
+
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "pizza" && !(_id in path("drafts.**"))]';
+  const pizzas = await client.fetch(query);
+  return {
+    props: {
+      pizzas,
+    },
+  };
+};
+
+
 
