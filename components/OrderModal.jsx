@@ -22,6 +22,8 @@ export default function OrderModal({opened, setOpened, PaymentMethod}) {
         e.preventDefault();
         const id = await createOrder({...FormData, total, PaymentMethod});
         toast.success("Order Placed");
+
+ // Reset Cart 
         resetCart();
         {
         typeof window !== "undefined" && localStorage.setItem("order", id);

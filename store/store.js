@@ -27,14 +27,14 @@ export const useStore = create(
       },
     })),
 
-    // resetCart: () =>
-    // set(() => ({
-    //   cart: {
-    //     pizzas: [],
-    //     quantity: 0,
-    //     total: 0,
-    //   },
-    // })),
+    resetCart: () =>
+    set(() => ({
+      cart: {
+        pizzas: [],
+        quantity: 0,
+        total: 0,
+      },
+    })),
 
 //     // orders
 //     order: "",
