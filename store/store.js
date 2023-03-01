@@ -20,23 +20,23 @@ export const useStore = create(
 
     })),
 
-    // // Remove Pizza
-    // removePizza: (index) =>
-    // set((state) => ({
-    //   cart: 
-    //   { pizzas: state.cart.pizzas.filter((_, i) => i != index) 
-    //   },
-    // })),
+    // Remove Pizza
+    removePizza: (index) =>
+    set((state) => ({
+      cart: 
+      { pizzas: state.cart.pizzas.filter((_, i) => i != index) 
+      },
+    })),
    
-    // // Reset Cart
-    // resetCart: () =>
-    // set(() => ({
-    //   cart: {
-    //     pizzas: [],
-    //     quantity: 0,
-    //     total: 0,
-    //   },
-    // })),
+    // Reset Cart
+    resetCart: () =>
+    set(() => ({
+      cart: {
+        pizzas: [],
+        quantity: 0,
+        total: 0,
+      },
+    })),
 
 })
 
