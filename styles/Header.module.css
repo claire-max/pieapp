@@ -21,6 +21,7 @@
     display: flex;
     gap:1rem;
     justify-content: flex-end;
+    padding-right: 1rem;
 }
 
 .cart {
@@ -29,6 +30,7 @@
     cursor: pointer;
     z-index:99;
     color: #ffe398;
+    
 }
 
 .badge {
@@ -41,6 +43,7 @@
     height:20px;
     justify-content: center;
     align-items: center;
-    right: -0.5rem
+    right: -0.5rem;
+    
 
 }

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import css from "../styles/Services.module.css";
-import s1 from "../assets/s1.png";
-import s2 from "../assets/s2.png";
-import s3 from "../assets/s3.png";
+import order from "../assets/order1.png";
+import del from "../assets/del.png";
+import eating from "../assets/eating.png";
 export default function Services() {
   return (
     <>
@@ -17,7 +17,7 @@ export default function Services() {
       <div className={css.services}>
         <div className={css.feature}>
           <div className={css.ImageWrapper}>
-            <Image src={s1} alt="s1" objectFit="cover" layout="intrinsic" />
+            <Image src={order} alt="order" objectFit="cover" layout="intrinsic"/>
           </div>
           <span>Easy to Order</span>
           <span>Only a few steps for ordering</span>
@@ -25,7 +25,7 @@ export default function Services() {
 
         <div className={css.feature}>
           <div className={css.ImageWrapper}>
-            <Image src={s2} alt="s1" objectFit="cover" layout="intrinsic" />
+            <Image src={del} alt="del" objectFit="cover" layout="intrinsic" />
           </div>
           <span>Fast Delivery</span>
           <span>Delivery that is always on time</span>
@@ -33,7 +33,7 @@ export default function Services() {
 
         <div className={css.feature}>
           <div className={css.ImageWrapper}>
-            <Image src={s3} alt="s1" objectFit="cover" layout="intrinsic" />
+            <Image src={eating} alt="eating" objectFit="cover" layout="intrinsic" />
           </div>
           <span>Best Quality</span>
           <span>Not only fast, but the highest quality</span>

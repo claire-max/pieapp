@@ -16,7 +16,7 @@ export default function Cart() {
   const [Order, setOrder] = useState(
     typeof window !== "undefined" && localStorage.getItem("order")
   );
-  
+
   const router = useRouter()
   // Remove Pizza from zustand store
   const handleRemove = (index) => {
@@ -125,12 +125,12 @@ export default function Cart() {
               <span>$ {total()}</span>
             </div>
           </div>
-          {/* {!Order && CartData.pizzas.length ? ( */}
+          {!Order && CartData.pizzas.length ? (
             <div className={css.buttons}>
               <button className="btn" onClick={handleOnDelivery}>Pay on Delivery</button>
               <button className="btn" onClick={handleCheckout}>Pay Now</button>
             </div>
-          {/* ) : null} */}
+           ) : null} 
         </div>
       </div>
       <Toaster />

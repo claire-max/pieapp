@@ -36,32 +36,32 @@ export const useStore = create(
       },
     })),
 
-//     // orders
-//     order: "",
-//     addOrder: (id) => {
-//       set(() => ({
-//         order: id,
-//       }));
-//     },
-//     resetOrder: () => {
-//       set(() => ({
-//         order: "",
-//       }));
-//     },
+    // orders
+    order: "",
+    addOrder: (id) => {
+      set(() => ({
+        order: id,
+      }));
+    },
+    resetOrder: () => {
+      set(() => ({
+        order: "",
+      }));
+    },
 
-//     // reset Store
-//     resetStore:()=> {
-//       set(()=> (
-//         {
-//           cart: {
-//             pizzas: [],
-//             quantity: 0,
-//             total: 0,
-//           },
-//           order: ""
-//         }
-//       ))
-//     }
+    // reset Store
+    resetStore:()=> {
+      set(()=> (
+        {
+          cart: {
+            pizzas: [],
+            quantity: 0,
+            total: 0,
+          },
+          order: ""
+        }
+      ))
+    }
 
   })
 )

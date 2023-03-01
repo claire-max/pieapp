@@ -13,6 +13,8 @@
     font-weight: bold;
     justify-content: flex-start;
     padding-left: 2rem;
+    font-size: 2rem;
+    color: #d53f40;
     
 }
 
@@ -44,4 +46,7 @@
     row-gap: 2rem;
     align-items: center;
     justify-content: space-around;
+    color: white;
+    text-shadow:2px 2px 2px  #d53f40;
+    
 }  
