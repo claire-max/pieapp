@@ -8,15 +8,13 @@ import { useState } from "react";
 import { useStore } from "../../store/store";
 import toast, {Toaster} from "react-hot-toast"
 
-
 export default function Pizza({ pizza }) {
     const src = urlFor(pizza.image).url()
-    const [Size, setSize] = useState(1)
-    const [Quantity, setQuantity] = useState(1);
+   const [Size, setSize] = useState(1)
+   const [Quantity, setQuantity] = useState(1);
 
-
- // Handle Quantity
- const handleQuan = (type) => {
+   // Handle Quantity
+   const handleQuan = (type) => {
     type === "inc"
       ? setQuantity((prev) => prev + 1)
       : Quantity === 1
@@ -24,17 +22,15 @@ export default function Pizza({ pizza }) {
       : setQuantity((prev) => prev - 1);
   };
 
-
-  // Add to cart function 
+  //add to cart function 
   const addPizza = useStore((state)=>state.addPizza)
   const addToCart = ()=> {
     addPizza({ ...pizza, price: pizza.price[Size], quantity: Quantity, size: Size });
     toast.success("Added to Cart")
   }
-
     return (
-        <Layout>
-        <div className={css.container}>
+    <Layout>
+    <div className={css.container}>
         <div className={css.imageWrapper}>
             <Image
             loader={()=> src}
@@ -47,7 +43,8 @@ export default function Pizza({ pizza }) {
             objectFit="cover"
             />
         </div>
-        <div className={css.right}>
+   
+  <div className={css.right}>
     <span>{pizza.name}</span>
     <span>{pizza.details}</span>
     <span>
@@ -88,22 +85,20 @@ export default function Pizza({ pizza }) {
    </div>
 
    {/* Button */}
-   <div className={`btn ${css.btn}`} onClick={addToCart} >
+   <div className={`btn ${css.btn}`} onClick={addToCart}>
             Add to Cart
           </div>
-         
+
 
    </div>
    <Toaster/>
-    </div>
-
-
-</Layout>
+</div>
+    </Layout>
     )
 }
 
 
-// Server side code
+ // Server side code
 export async function getStaticPaths() {
     const paths = await client.fetch(
       `*[_type == "pizza" && defined(slug.current)][].slug.current`
@@ -125,4 +120,3 @@ export async function getStaticPaths() {
           },
         };
       }
-

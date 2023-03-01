@@ -3,15 +3,14 @@ import create from "zustand";
 export const useStore = create(
     (set) => ({
 
-        // cart 
+        //cart 
         cart: {
             pizzas: [],
-            quantity: 0,
-            total: 0,
+            // quantity: 0,
+            // total: 0,
 
         },
 
-    // Add Pizza
         addPizza: (data) =>
       set((state) => ({
         cart: {
@@ -20,24 +19,49 @@ export const useStore = create(
 
     })),
 
-    // Remove Pizza
+    //Remove Pizza
     removePizza: (index) =>
     set((state) => ({
       cart: 
       { pizzas: state.cart.pizzas.filter((_, i) => i != index) 
       },
     })),
-   
-    // Reset Cart
-    resetCart: () =>
-    set(() => ({
-      cart: {
-        pizzas: [],
-        quantity: 0,
-        total: 0,
-      },
-    })),
 
-})
+    // resetCart: () =>
+    // set(() => ({
+    //   cart: {
+    //     pizzas: [],
+    //     quantity: 0,
+    //     total: 0,
+    //   },
+    // })),
 
+//     // orders
+//     order: "",
+//     addOrder: (id) => {
+//       set(() => ({
+//         order: id,
+//       }));
+//     },
+//     resetOrder: () => {
+//       set(() => ({
+//         order: "",
+//       }));
+//     },
+
+//     // reset Store
+//     resetStore:()=> {
+//       set(()=> (
+//         {
+//           cart: {
+//             pizzas: [],
+//             quantity: 0,
+//             total: 0,
+//           },
+//           order: ""
+//         }
+//       ))
+//     }
+
+  })
 )
