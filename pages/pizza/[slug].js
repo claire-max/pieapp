@@ -36,8 +36,8 @@ export default function Pizza({ pizza }) {
             loader={()=> src}
             alt=" "
             src={src} 
-            height={20}
-            width={20}
+            // height={10}
+            // width={10}
             layout='fill' 
             unoptimized
             objectFit="cover"
@@ -83,7 +83,7 @@ export default function Pizza({ pizza }) {
         />
     </div>
    </div>
-
+   
    {/* Button */}
    <div className={`btn ${css.btn}`} onClick={addToCart}>
             Add to Cart

@@ -29,15 +29,19 @@ export default function Orders({ order }) {
           localStorage.clear();
         }
       }, [order])
+
+    
     return(
         <Layout>
           <div className={css.container}>
-            <span className={css.heading}>Order in process</span>
+          <span className={css.heading}>Order in process</span>
+            <div className={css.orderContainer}>
+            {/* <span className={css.heading}>Order in process</span> */}
             <div className={css.details}>
-        <div>
-            <span>Order ID</span>
+        {/* <div>
+            <span>Order ID </span>
             <span>{order._id}</span>
-        </div>
+        </div> */}
         <div>
             <span>Customer Name</span>
             <span>{order.name}</span>
@@ -50,19 +54,21 @@ export default function Orders({ order }) {
             <span>Method</span>
             <span>
                  {
-                    order.method === 0 ? 'Cash on Deliver': 'Online Payment(Paid)'
+                    order.method === 0 ? 'Cash': 'Paid'
                  }
             </span>
         </div>
         <div>
             <span>Total</span>
             <span>$ {order.total}</span>
+            </div>
+        {/* </div> */}
         </div>
         </div>
 
     <div className={css.statusContainer}>
       <div className={css.status}>
-        <UilBill width={50} height={50} />
+        <UilBill width={80} height={80} />
         <span>Payment</span>
                 {order.method === 0 ? (
                     <span className={css.pending}>On Delivery!</span>
@@ -92,7 +98,7 @@ export default function Orders({ order }) {
                 <Image src={Onway} alt=" " width={50} height={50} />
                 <span>OnWay</span>
             {order.status === 2 && (
-              <div className={css.spinner}>
+              <div className={css.onwayspinner}>
                 <Image src={Spinner} alt="" />
                  
               </div>
@@ -106,7 +112,7 @@ export default function Orders({ order }) {
         </div>
 
         <div className={css.status}>
-                <UilBox width={50} height={50} />
+                <UilBox width={60} height={60} />
                 <span>Delivered</span>
 
             {order.status === 3 && (

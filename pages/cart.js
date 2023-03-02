@@ -113,6 +113,7 @@ export default function Cart() {
             </tbody>
           </table>
         </div>
+        <div className={css.right}>
         <div className={css.cart}>
           <span>Cart</span>
           <div className={css.CartDetails}>
@@ -131,6 +132,7 @@ export default function Cart() {
               <button className="btn" onClick={handleCheckout}>Pay Now</button>
             </div>
            ) : null} 
+        </div>
         </div>
       </div>
       <Toaster />
