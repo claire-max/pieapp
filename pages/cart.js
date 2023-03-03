@@ -63,7 +63,7 @@ export default function Cart() {
                 <th>Pizza</th>
                 <th>Name</th>
                 <th>Size</th>
-                <th>Price</th>
+                {/* <th>Price</th> */}
                 <th>Quantity</th>
                 <th>Total</th>
                 <th></th>
@@ -93,7 +93,7 @@ export default function Cart() {
                           ? "Medium"
                           : "Large"}
                       </td>
-                      <td>{pizza.price}</td>
+                      {/* <td>{pizza.price}</td> */}
                       <td>{pizza.quantity}</td>
                       <td>{pizza.price * pizza.quantity}</td>
                       <td>
